@@ -1,0 +1,280 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+/*home {
+	flex: 1;
+    text-align: center;
+    min-width: 200px;
+}*/
+header {
+    background-color: #FFFFFF;
+    color: #4aa72a;
+    padding: 0.25em 0.5em;
+    margin: 0.45em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+}
+
+header nav ul li a {
+    color: #4aa72a;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #8B0000;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: -10px;
+}
+
+.hero img {
+    width: 100%;
+    height: 74vh;
+    /*max-height: 500px;*/
+    filter: brightness(50%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.hero-text h2 {
+    font-size: 3em;
+    margin: 0.2em 0;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+}
+
+section {
+    padding: 2em 1em;
+    margin-bottom: 1em;
+}
+
+.container {
+    background-color: #f9f9f9;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.menu-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+}
+
+.menu-item {
+    flex: 1;
+    text-align: center;
+    min-width: 200px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+}
+
+.divider {
+    width: 2px;
+    background-color: #ccc;
+    height: 100%;
+    margin: 0 10px;
+}
+
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.section-content img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #8B0000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.custom-size {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 1em;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #8B0000;
+}
+
+button {
+    background-color: #4aa72a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8B0000;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#activities-container, #gardens-container, #about-container, #map-container, #restaurant-container, #menu-container {
+    background-color: #f9f9f9;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 1700px;
+    margin: 2em auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+#zipline, #ropeclimb, #swimming, #camping, #playground, #photography, #events, #teambuilding, #about, #map, #localfood, #exoticfood, #localdishes, #localdrinks, #exoticdishes, #exoticdrinks {
+    flex: 1;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+}
+
+#zipline h2, #ropeclimb h2, #swimming h2, #camping h2, #playground h2, #photography h2, #events h2, #teambuilding h2, #about h2, #map h2, #localfood h2, #exoticfood h2, #localdishes h2, #localdrinks h2, #exoticdishes h2, #exoticdrinks h2 {
+    font-size: 2em;
+    color: #8B0000;
+    text-align: center;
+    margin-bottom: 1em;
+}
+#zipline .section-content img, #ropeclimb .section-content img, #swimming .section-content img, #camping .section-content img , #playground .section-content img, #photography .section-content img, #events .section-content img, #teambuilding .section-content img, #map .section-content map, #localfood .section-content img, #exoticfood .section-content img, #localdishes .section-content img, #localdrinks .section-content img, #exoticdishes .section-content img, #exoticdrinks .section-content img{
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+#zipline .section-content, #ropeclimb .section-content, #swimming .section-content, #camping .section-content, #playground .section-content, #photography .section-content, #events .section-content, #teambuilding .section-content, #map .section-content, #localfood .section-content, #exoticfood .section-content, #localdishes .section-content, #localdrinks .section-content, #exoticdishes .section-content, #exoticdrinks .section-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.section-content img:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    header .container1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    .hero-text h2 {
+        font-size: 2em;
+    }
+    .hero-text p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-text h2 {
+        font-size: 1.8em;
+    }
+    .hero-text p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text

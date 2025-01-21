@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your stay at Equator Green Gardens & Resort.">
+    <title>Booking - Hotel & Resort</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        function validateForm() {
+            const form = document.forms["bookingForm"];
+            const inputs = form.getElementsByTagName("input");
+            const selects = form.getElementsByTagName("select");
+            let valid = true;
+
+            for (let input of inputs) {
+                if (input.value === "") {
+                    alert("Please fill out all fields.");
+                    valid = false;
+                    break;
+                }
+            }
+
+            for (let select of selects) {
+                if (select.value === "Select Service") {
+                    alert("Please select a service.");
+                    valid = false;
+                    break;
+                }
+            }
+
+            if (valid) {
+                return confirm("Are you sure the information you entered is correct?");
+            }
+
+            return valid;
+        }
+
+        function clearForm() {
+            document.forms["bookingForm"].reset();
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            if (validateForm()) {
+                alert("Booking Successfully placed");
+                clearForm();
+                window.location.reload();
+            }
+        }
+
+        function calculateAmount() {
+            const service = document.getElementById("service").value;
+            const guests = document.getElementById("guests").value;
+            let amount = 0;
+
+            if (service === "Swimming") {
+                amount = guests * 250; }
+				if (service === "Zip Lining") {
+                amount = guests * 300;
+            }
+				if (service === "Rope Climbing") {
+                amount = guests * 400;
+            }
+            document.getElementById("amount").innerText = amount;
+        }
+    </script>
+</head>
+<body>
+   <header>
+        <div class="container1">
+            <h1>Equator Green Gardens & Resort</h1>
+            <img src="file:///C:/Users/User/Downloads/EQUATOR/WEBSITE/images/logo.png" alt="Logo" class="logo">
+            <nav>
+                <ul>
+                     <li><a href="index.html">Home</a></li>
+                    <li><a href="restaurant.html">Restaurant</a></li>
+                    <li><a href="activities.html">Fun-Activities</a></li>
+					 <li><a href="gardens.html">Gardens</a></li>
+					<li><a href="booking.html">Book Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="booking">
+        <h2 style="text-align: center;">Booking Form</h2>
+        <div class="form-container">
+            <form name="bookingForm" action="https://formspree.io/f/{your_form_id}" method="POST" onsubmit="handleSubmit(event)">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+                <label for="service">Service:</label>
+                <select id="service" name="service" required onchange="calculateAmount()">
+                    <option value="Select Service" selected>Select Service</option>
+                    <option value="Reserve a Table">Reserve a Table</option>
+                    <option value="Reserve a Conference Hall">Reserve a Conference Hall</option>
+                    <option value="Swimming">Swimming</option>
+                    <option value="Camping">Camping</option>
+                    <option value="Ziplining">Zip Lining</option>
+                    <option value="Rope Climbing">Rope Climbing</option>
+                </select>
+
+                <label for="date">Date of Booking:</label>
+                <input type="date" id="date" name="date" value="<?php echo date('Y-m-d'); ?>" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" required oninput="calculateAmount()">
+
+                <label for="amount">Amount in Kshs:</label>
+                <label id="amount">0</label>
+
+                <img src="file:///C:/Users/User/Downloads/EQUATOR/WEBSITE/images/till.jpg" alt="TILL NUMBER">
+
+                <label for="transaction-code">Transaction Code:</label>
+                <input type="text" id="transaction-code" name="transaction-code" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Equator Green Gardens & Resort. All Rights Reserved. Website created by Kosgei</p>
+    </footer>
+</body>
+</html>
