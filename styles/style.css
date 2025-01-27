@@ -96,7 +96,7 @@ section {
     padding: 2em 1em;
     margin-bottom: 1em;
 }
-/*
+
 .container {
     background-color: #f9f9f9;
     padding: 2em;
@@ -105,7 +105,7 @@ section {
     max-width: 100%;
     margin: 0 auto;
 }
-*/
+
 .menu-content {
     display: flex;
     flex-wrap: wrap;
