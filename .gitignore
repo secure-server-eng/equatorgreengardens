@@ -1,1 +1,5 @@
+CONSUMER_KEY=2HydXH61Vzyc8lZDDpuiYGSD90WHVrmgl8tn6nGIExztSSBQ
+CONSUMER_SECRET=xEpzeba7hcYlKUAOpsvR5tNjUggzXQGGlR8Uevr5Jqr6ZBmvUnEzBRugkTTqg0nF
+PASSKEY=your_passkey
+CALLBACK_URL=https://yourdomain.com/callback
 
